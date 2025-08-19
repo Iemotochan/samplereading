@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>たてよみ - 漫画ビューア</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">📖</div>
+            <h2 class="loading-title">冒険を読み込んでいます...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">ページをスキャンしています</p>
+        </div>
+    </div>
+
+    <div id="viewer-container">
+        <div id="manga-viewer">
+            <div id="page-container"></div>
+        </div>
+        
+        <div id="controls">
+            <button id="prev-btn">前のページ</button>
+            <span id="page-info">1 / 1</span>
+            <button id="next-btn">次のページ</button>
+            <button id="zoom-in">ズーム+</button>
+            <button id="zoom-out">ズーム-</button>
+            <button id="fit-width">幅に合わせる</button>
+        </div>
+    </div>
+
+    <!-- CTA ポップアップモーダル -->
+    <div id="cta-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎉 最後まで読んでいただき、ありがとうございます！</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>続きや関連作品を読むなら、こちらのプラットフォームがおすすめです</p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-btn mechacomic" data-platform="mechacomic">
+                        <div class="cta-icon">📱</div>
+                        <div class="cta-text">
+                            <div class="cta-title">めちゃコミ</div>
+                            <div class="cta-subtitle">無料漫画が豊富</div>
+                        </div>
+                    </a>
+                    <a href="#" class="cta-btn piccoma" data-platform="piccoma">
+                        <div class="cta-icon">🌟</div>
+                        <div class="cta-text">
+                            <div class="cta-title">ピッコマ</div>
+                            <div class="cta-subtitle">待てば0円で読める</div>
+                        </div>
+                    </a>
+                    <a href="#" class="cta-btn kindle" data-platform="kindle">
+                        <div class="cta-icon">📚</div>
+                        <div class="cta-text">
+                            <div class="cta-title">Kindle</div>
+                            <div class="cta-subtitle">電子書籍で購入</div>
+                        </div>
+                    </a>
+                    <a href="#" class="cta-btn bookstore" data-platform="bookstore">
+                        <div class="cta-icon">🏪</div>
+                        <div class="cta-text">
+                            <div class="cta-title">本で読む</div>
+                            <div class="cta-subtitle">サイトで購入</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="modal-footer">
+                    <button id="restart-reading" class="restart-btn">もう一度読む</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/viewer.js"></script>
+</body>
+</html>
